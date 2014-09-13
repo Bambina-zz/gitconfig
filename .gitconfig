@@ -1,0 +1,38 @@
+[user]
+	name = 廣野 まゆ子
+	email = mayuko.hirono@gmail.com
+[core]
+	excludesfile = /Users/mayuko-hirono/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+  br = branch
+  ci = commit -v
+  co = checkout
+  df = diff
+  mg = merge
+  pl = pull
+  st = status
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[credential]
+  helper = osxkeychain
+[color]
+	ui = always
+	[color "branch"]
+	       current = yellow reverse
+	       local = yellow
+	       remote = green
+	[color "diff"]
+	       meta = yellow bold
+	       frag = magenta bold
+	       old = red bold
+	       new = green bold
+	       whitespace = red reverse
+	[color "status"]
+	       added = yellow
+	       changed = green
+	       untracked = cyan
+
